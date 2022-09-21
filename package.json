@@ -9,11 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "next": "12.3.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "^1.54.9",
+    "swiper": "^8.4.2"
   },
   "devDependencies": {
+    "@types/node": "18.7.18",
+    "@types/react": "18.0.20",
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.0"
   }
