@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { ApiService } from './api/axios'
 import GameDetails from '../component/games/GameDetails'
 import GamesList from '../component/games/GamesList'
 import GenresList from '../component/genres/GenresList'
@@ -18,6 +17,7 @@ export default function Home() {
 
   const BackHome = (e) => {
     setClicked(false)
+    setGameClicked(false)
   }
   const BackGenre = (e) => {
     setGameClicked(false)

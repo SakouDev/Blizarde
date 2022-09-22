@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
-import { ApiService } from '../../api/axios'
+import { ApiService } from '../../pages/api/axios'
 
 export default function GameDetails({selectedGame, selectedGameId}) {
 

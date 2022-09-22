@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ApiService } from '../../api/axios'
+import { ApiService } from '../../pages/api/axios'
 import Games from './Games';
 
 export default function GamesList({selectedGenre, selectedGenreId, setGameClicked,setSelectedGameId}) {

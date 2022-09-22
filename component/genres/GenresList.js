@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ApiService } from '../../api/axios'
+import { ApiService } from '../../pages/api/axios'
 import Genres from './Genres'
 
 export default function GenresList({setClicked, setSelectedGenreId}) {
