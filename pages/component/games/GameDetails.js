@@ -23,47 +23,46 @@ export default function GameDetails({selectedGame, selectedGameId}) {
 
 
         <div className='rightPart container'>
-            <h2>{gameDetails.name}</h2>
+          <h2>{gameDetails.name}</h2>
+          <div>
+            <h4>Description : </h4>
+            <p className='description' >
+              {gameDetails.description_raw}
+            </p>
+            <p>Metacritics : {gameDetails.metacritic}</p>
             <div>
-              <h4>Description : </h4>
-              <p className='description' >
-                {gameDetails.description_raw}
-              </p>
-              <p>Metacritics : {gameDetails.metacritic}</p>
-              <div>
-                <h4>Date de sortie : </h4>{gameDetails.released}
-              </div>
-              <div>Platforme : 
-                {gameDetails.platforms?.map((data,index)=>{
-                  
-                    let result = <p key={index}>{data.platform.name}, &nbsp;</p>
-                    return result
-                  })}
-              </div>
-              <div>Genre : 
-                {gameDetails.genres?.map((data,index)=>{
-                  let result = <p key={index}>{data.name} - &nbsp;</p>
-                  if(index == gameDetails.genres.length - 1) result = <p key={index}>{data.name}</p>
+              <h4>Date de sortie : </h4>{gameDetails.released}
+            </div>
+            <div>Platforme : &nbsp;
+              {gameDetails.platforms?.map((data,index)=>{
+                
+                  let result = <p key={index}>{data.platform.name}, &nbsp;</p>
                   return result
                 })}
-              </div>
-              <div>
-                Menfou:
-                {gameDetails.developers?.map((data,index)=>(
-                  <p> {data.name} - &nbsp;</p>
-                  ))}
-                  {/* <p>Devellopers : {gameDetails.developers.name}</p> */}
-              </div>
+            </div>
+            <div>Genre : 
+              {gameDetails.genres?.map((data,index)=>{
+                let result = <p key={index}>{data.name} - &nbsp;</p>
+                if(index == gameDetails.genres.length - 1) result = <p key={index}>{data.name}</p>
+                return result
+              })}
+            </div>
+            <div>
+              Developers : &nbsp;
+              {gameDetails.developers?.map((data,index)=>(
+                <p key={index}> {data.name} -&nbsp;</p>
+                ))}
+                {/* <p>Devellopers : {gameDetails.developers.name}</p> */}
             </div>
           </div>
-
-          <div className='tags'>
-            <span>TAGS : </span>
+          <ul class="tags">
                   {gameDetails.tags?.map((data,index)=>{
-                    let result = <p key={index}>{data.name}</p>
+                    let result = <li key={index} class="tag" >{data.name}</li>
                     return result
                   })}
-          </div>
+          </ul>
+        </div>
+            
 
       </div>
     </>

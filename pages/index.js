@@ -17,8 +17,10 @@ export default function Home() {
   const {GameRender, selectedGame} = GamesList({apiDataGenre,selectedGenreId,selectedGenre,setGameClicked, setSelectedGameId})
 
 
-  const Back = (e) => {
+  const BackHome = (e) => {
     setClicked(false)
+  }
+  const BackGenre = (e) => {
     setGameClicked(false)
   }
   
@@ -26,9 +28,9 @@ export default function Home() {
     <>
       <header>
         <h1 className="homeH1" >BLIZARDE</h1>
-        <button onClick={Back} >Acceuil</button>
+        <button onClick={BackHome} >Genres</button>
+        <button onClick={BackGenre} >Games</button>
       </header>
-
         { !Clicked ? 
           <>{GenreRender}</>
         : 
@@ -39,7 +41,7 @@ export default function Home() {
         }
 
       <footer>
-        <h2>Menfou</h2>
+        <h2>Made with ♥</h2>
       </footer>
     </>
   )
